@@ -1,13 +1,13 @@
 <template>
-  <div class="font-noto bg-dark min-h-screen">
+  <div class="min-h-screen font-noto bg-dark">
     <main>
       <div class="relative">
-        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+        <div class="absolute inset-x-0 bottom-0 bg-gray-100 h-1/2" />
         <div>
           <div class="relative sm:overflow-hidden">
             <div class="absolute inset-0">
               <img
-                class="h-full w-full object-cover"
+                class="object-cover w-full h-full"
                 alt="People dancing bachata"
                 src="/img/hero_640.jpg"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 100vw, (max-width: 1536px) 100vw, 100vw"
@@ -23,7 +23,7 @@
               <div class="absolute inset-0 bg-black opacity-50" />
             </div>
 
-            <nav class="relative flex p-4 justify-end">
+            <nav class="relative flex justify-end p-4">
               <TButton type="simple" to="/signin" :label="$t('signin')" />
             </nav>
 
@@ -33,7 +33,7 @@
               </div>
 
               <p
-                class="mt-2 max-w-lg mx-auto text-center sm:max-w-3xl text-white"
+                class="max-w-lg mx-auto mt-2 text-center text-white sm:max-w-3xl"
               >
                 Even one dance contact in a city makes a difference
               </p>
@@ -44,31 +44,31 @@
                   label="Search dancers"
                   to="/search"
                   type="void"
-                  class="mt-8 w-full text-gray-500 bg-white hover:bg-gray-100 font-semibold py-2 px-4 border border-gray-400 rounded-full shadow"
+                  class="w-full px-4 py-2 mt-8 font-semibold text-gray-500 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100"
                 />
               </div>
 
               <div class="flex justify-center">
-                <div class="mt-8 flex space-x-4 font-bold text-white">
+                <div class="flex mt-8 space-x-4 font-bold text-white">
                   <div class="flex flex-col items-center justify-center">
-                    <TIcon name="group" class="h-16 w-16" />
+                    <TIcon name="group" class="w-16 h-16" />
                     <div class="text-4xl">1309</div>
                     <div class="text-sm">dancers</div>
                   </div>
                   <div class="flex flex-col items-center justify-center">
-                    <TIcon name="location" class="h-16 w-16" />
+                    <TIcon name="location" class="w-16 h-16" />
                     <div class="text-4xl">102</div>
                     <div class="text-sm">cities</div>
                   </div>
                   <div class="flex flex-col items-center justify-center">
-                    <TIcon name="calendar" class="h-16 w-16" />
+                    <TIcon name="calendar" class="w-16 h-16" />
                     <div class="text-4xl">441</div>
                     <div class="text-sm">events</div>
                   </div>
                 </div>
               </div>
 
-              <div class="mt-8 flex justify-center">
+              <div class="flex justify-center mt-8">
                 <TButton
                   type="primary"
                   to="/register"
@@ -77,19 +77,53 @@
               </div>
 
               <p
-                class="mt-8 max-w-lg mx-auto text-center sm:max-w-3xl text-white"
+                class="max-w-lg mx-auto mt-8 text-center text-white sm:max-w-3xl"
               >
                 Salsa, Bachata, Kizomba, Urban Kiz, Raggaeton, Casino, Tango and
                 130 more dance styles
               </p>
             </div>
           </div>
+          <div class="p-4 bg-light">
+            <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+              <TFeature
+                name="icon-calendar"
+                title="Event Calendar"
+                description="Find dance workshops, courses, socials and parties. We fill event calendar all together as a community. Everyone can share."
+              />
+              <TFeature
+                name="icon-partner"
+                title="Dance Partners"
+                description="Find dance partner for any dance style. Let us know who you are looking for and let them find you."
+              />
+              <TFeature
+                name="icon-qa"
+                title="City Chats"
+                description="Find dance chat in any city. Join your city chat and invite your friends to help new dancers in the city. Think globally, act locally."
+              />
+              <TFeature
+                name="icon-festival"
+                title="Dance Travel"
+                description="Find international dance festivals and congresses. Share a ride, an appartment and find a buddy to experience a new city together."
+              />
+              <TFeature
+                name="icon-collab"
+                title="Volunteer"
+                description="We build a community, where everyone enters with mindset “I can help”, so whenever you need help you can count on it. We are one big family worldwide. We help each other."
+              />
+              <TFeature
+                name="icon-podcast"
+                title="Interviews"
+                description="We are going to show you how dancers, artists and organisers can share advice, tips and know how out of all of us."
+              />
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
-    <div class="bg-dark text-white">
-      <TFooter class="p-4 mx-auto max-w-2xl" />
+    <div class="text-white bg-dark">
+      <TFooter class="max-w-2xl p-4 mx-auto" />
     </div>
   </div>
 </template>
